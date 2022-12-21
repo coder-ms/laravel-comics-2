@@ -1,3 +1,4 @@
+
 <?php
 $footerSearch = config('dbDCComics.footerSearch');
 ?>
@@ -19,11 +20,9 @@ $footerSearch = config('dbDCComics.footerSearch');
 </head>
 
 <body>
-    {{--@include('partials.banner')--}}
     @include('partials.header')
-    {{--@include('partials.jumbotron')--}}
     <main>
-       {{--@yield('currentSeries')--}}
+       <h3>MAIN</h3>
     </main>
     @include('partials.footer', compact('footerSearch') )
 </body>
