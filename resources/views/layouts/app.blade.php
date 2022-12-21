@@ -24,7 +24,7 @@ $footerSearch = config('dbDCComics.footerSearch');
     <main>
        <h3>MAIN</h3>
     </main>
-    @include('partials.footer', compact('footerSearch') )
+    @include('partials.footer', compact('footerSearch'))
 </body>
 
 </html>
