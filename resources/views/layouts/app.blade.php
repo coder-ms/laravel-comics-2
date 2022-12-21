@@ -1,6 +1,6 @@
 
 <?php
-$footerSearch = config('dbDCComics'); //.footerSearch
+$footerSearch = config('dbDCComics.footerSearch');
 ?>
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
@@ -27,7 +27,7 @@ $footerSearch = config('dbDCComics'); //.footerSearch
        {{--@yield('currentSeries')--}}
        <h1>HELLO WORLD</h1>
     </main>
-    @include('partials.footer') {{--, compact('footerSearch') )--}}
+    @include('partials.footer', compact('footerSearch') )
 </body>
 
 </html>
