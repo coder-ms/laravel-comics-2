@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Guest\HomeController;
+use App\Http\Controllers\Guest\ComicController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +16,6 @@ use App\Http\Controllers\Guest\HomeController;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 
-Route::get('/comics', [HomeController::class, 'index'])->name('comics.index');
-
+Route::resource('comics', ComicController::class);

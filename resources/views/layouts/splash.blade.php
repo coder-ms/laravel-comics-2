@@ -1,6 +1,3 @@
-<?php
-$footerLinks = config('comics_db.footerLinks');
-?>
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -8,7 +5,7 @@ $footerLinks = config('comics_db.footerLinks');
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>@yield('page-title', 'Laravel comics 2')</title>
+    <title>@yield('page-title', 'Splash splash')</title>
 
     <!-- Fonts -->
     <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -19,10 +16,7 @@ $footerLinks = config('comics_db.footerLinks');
 </head>
 <body>
 
-    @include('partials.header')
-    @include('partials.jumbo')
-    @yield('main-content')
-    @include('partials.footer', compact('footerLinks'))
+    @yield('splash-content')
 
 </body>
 </html>

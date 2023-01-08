@@ -206,3 +206,110 @@ section{
         color: white;
     }
 }
+
+#comicSpecs{
+    .current-comic{
+        height: 60px;
+        background-color: $blue-bg;
+        .container{
+            height: 100%;
+            width: 70%;
+            img{
+                bottom: 10px;
+                left: 0;
+                width: 195px;
+                height: 295px;
+            }
+        }
+    }
+
+    .comic-infos{
+        width: 70%;
+        padding: 50px;
+        .info-box{
+            width: 65%;
+            min-height: 100px;
+            h4{
+                font-size: 1.8rem;
+                text-transform: uppercase;
+            }
+
+            .price-availability{
+                height: 40px;
+                background-color: rgb(88, 176, 94);
+
+                .pa-left{
+                    width: 70%;
+                    height: 100%;
+                    border-right: 2px solid darkslategrey;
+                }
+
+                .pa-right{
+                    width: 30%;
+                }
+            }
+
+        }
+
+        .adv{
+            width: 35%;
+            min-height: 100px;
+        }
+    }
+
+    .more-infos{
+        background-color: #f6f6f6;
+        min-height: 300px;
+        .container{
+            width: 70%;
+            .talent{
+                width: 55%;
+                h4{
+                    padding: 20px 0;
+                    border-bottom: 1px solid $grey-icons-bg;
+                }
+                div{
+                    padding: 20px 0;
+                    border-bottom: 1px solid $grey-icons-bg;
+                }
+            }
+            .specs{
+                width: 45%;
+                h4{
+                    padding: 20px 0;
+                    border-bottom: 1px solid $grey-icons-bg;
+                }
+                div{
+                    padding: 20px 0;
+                    border-bottom: 1px solid $grey-icons-bg;
+                }
+            }
+        }
+    }
+
+    .browse-sections{
+        height: 40px;
+        background-color: paleturquoise;
+        > div{
+            height: 100%;
+        }
+    }
+}
+
+
+#createForm{
+    height: 100vh;
+
+    .edit-title{
+        color: palevioletred;
+    }
+
+    &.edit{
+        background-color: orange;
+    }
+
+    label{
+        margin-top: 12px;
+        margin-bottom: 5px;
+    }
+}

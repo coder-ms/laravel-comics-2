@@ -1,9 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.splash')
 
-@section('content')
-   <h1>Hello World</h1>  
-@endsection
-
-@section('paragrafo')
-   <p>Lorem ipsum dolor sit amet.</p>  
+@section('splash-content')
+<a href="{{ route('comics.index') }}">comics/index</a>
+<br>
+<a href="{{ route('comics.create') }}">comics/create</a>
 @endsection

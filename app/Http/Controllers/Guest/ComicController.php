@@ -4,9 +4,11 @@ namespace App\Http\Controllers\Guest;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+
+//importo per utilizzo in store
 use App\Models\Comic;
 
-class HomeController extends Controller
+class ComicController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +18,7 @@ class HomeController extends Controller
     public function index()
     {
         $comics = Comic::all();
-        //dd($comics);
+        // $comics = config('comics_db.comics');
         return view('comics.index', compact('comics'));
     }
 
