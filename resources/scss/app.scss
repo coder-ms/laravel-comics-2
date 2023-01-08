@@ -1,5 +1,208 @@
 @import '~bootstrap/scss/bootstrap';
 
-body{
-    background-color: red;
+//COLORS
+
+$blue-text-active: #0282f9;
+$blue-bg: #0282f9;
+$grey-icons-bg: #797979;
+$grey-text-footer: #959595;
+$blue-follow-us: #0282f9;
+$grey-footer-bg: #303030;
+$darkgrey: #1C1C1C;
+
+// FONTS
+
+$f-smallest: 10px;
+$f-smaller: 12px;
+$f-small: 14px;
+
+header{
+    height: 90px;
+
+    .logo{
+        height: 60px;
+
+        img{
+            height: 100%;
+        }
+    }
+
+    nav{
+        width: 60%;
+        height: 100%;
+
+        ul{
+            list-style: none;
+            text-transform: uppercase;
+            font-size: $f-smaller;
+            line-height: 90px;
+            li{
+                transition: box-shadow .5s;
+                a{
+                    text-decoration: none;
+                    color: black;
+                }
+
+                &:hover{
+                    box-shadow: inset 0 -10px 0 -5px $blue-text-active;
+                }
+
+                &.active{
+                    box-shadow: inset 0 -10px 0 -5px $blue-text-active;
+                }
+
+            }
+        }
+    }
+
+    .srcBar{
+        border: none;
+        border-bottom: 3px solid $blue-text-active;
+        text-align: right;
+        outline: none;
+    }
+}
+
+#jumbo{
+    max-height: 300px;
+    overflow: hidden;
+    img{
+        width: 100%;
+    }
+}
+
+footer{
+    background-color: $grey-footer-bg;
+
+    .footer-top{
+        height: 320px;
+        background-image: url('../img/footer-bg.jpg');
+        background-size: cover;
+
+        .container{
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+
+            ul{
+                list-style: none;
+                color: $grey-text-footer;
+                font-size: $f-smaller;
+                margin-right: 20px;
+
+                h4{
+                    font-size: $f-small;
+                    color: white;
+                    text-transform: uppercase;
+                    margin: 12px 0;
+                }
+
+                li{
+                    padding: 2px 0;
+
+                    &:not(:first-of-type):hover{
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            img{
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translate(0, -50%);
+            }
+        }
+    }
+
+    .footer-bottom{
+        height: 80px;
+        .container{
+            height: 100%;
+
+            .shopBtn{
+                border: 2px solid $blue-bg;
+                padding: 5px 10px;
+                text-transform: uppercase;
+                color: white;
+                font-size: $f-small;
+            }
+
+            .socials{
+                width: 40%;
+                h4{
+                    margin: 0;
+                    color: $blue-follow-us;
+                    text-transform: uppercase;
+                    font-weight: bolder;
+                }
+            }
+        }
+    }
+
+}
+
+section{
+
+    background-color: $darkgrey;
+
+    #current-series{
+
+        a{
+            display: block;
+        }
+
+        .cover-wrapper{
+            color: white;
+            font-size: $f-smaller;
+
+            .modify-comic{
+                width: max-content
+            }
+
+            .cover{
+                width: 100%;
+                cursor: pointer;
+
+                img{
+                    width: 100%;
+                }
+
+
+                &:hover .comic-info{
+                    clip-path: polygon(100% 100%, 0 100%, 100% 24%);
+                }
+
+                .comic-info{
+                    background-image: url('https://img.freepik.com/premium-photo/old-texture-background-vintage-grunge-paper-antique-ancient-parchment-wall-design-template_213524-125.jpg');
+                    clip-path: polygon(100% 100%, 0 100%, 100% 100%);
+                    transition: clip-path .3s ease-out;
+                    font-size: $f-small;
+                    div{
+                        color: black;
+                        text-align: end;
+                        padding: 10px;
+                        .type{
+                            font-size: $f-smaller;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .banner{
+            background-color: $blue-bg;
+            width: max-content;
+            transform: translate(0, -50%);
+            color: white;
+        }
+    }
+
+    button{
+        background-color: $blue-bg;
+        border: none;
+        color: white;
+    }
 }
