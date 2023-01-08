@@ -1,5 +1,5 @@
 <?php
-$footerLinks = config('comics_db.footerLinks');
+$footerSearch = config('dbDCComics.footerSearch');
 ?>
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
@@ -8,7 +8,7 @@ $footerLinks = config('comics_db.footerLinks');
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>@yield('page-title', 'Laravel comics 2')</title>
+    <title>@yield('pageTitle', 'Home Page')</title>
 
     <!-- Fonts -->
     <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -17,12 +17,15 @@ $footerLinks = config('comics_db.footerLinks');
     @vite('resources/js/app.js')
 
 </head>
+
 <body>
-
+    @include('partials.banner')
     @include('partials.header')
-    @include('partials.jumbo')
-    @yield('main-content')
-    @include('partials.footer', compact('footerLinks'))
-
+    @include('partials.jumbotron')
+    <main>
+       @yield('currentSeries')
+    </main>
+    @include('partials.footer', compact('footerSearch') )
 </body>
+
 </html>

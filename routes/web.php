@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Guest\ComicController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +14,6 @@ use App\Http\Controllers\Guest\ComicController;
 */
 
 Route::get('/', function () {
-    return view('home');
-})->name('home');
-
-Route::resource('comics', ComicController::class);
+    $comicx = config('dbDCComics.comicx');
+    return view('comics', compact('comicx'));
+})->name('comics');

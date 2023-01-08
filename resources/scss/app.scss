@@ -1,20 +1,9 @@
 @import '~bootstrap/scss/bootstrap';
 
-//COLORS
-
-$blue-text-active: #0282f9;
-$blue-bg: #0282f9;
-$grey-icons-bg: #797979;
-$grey-text-footer: #959595;
-$blue-follow-us: #0282f9;
-$grey-footer-bg: #303030;
-$darkgrey: #1C1C1C;
-
-// FONTS
-
-$f-smallest: 10px;
-$f-smaller: 12px;
-$f-small: 14px;
+#topBanner{
+    background-color: #0282f9;
+    font-size: 10px;
+}
 
 header{
     height: 90px;
@@ -33,8 +22,7 @@ header{
 
         ul{
             list-style: none;
-            text-transform: uppercase;
-            font-size: $f-smaller;
+            font-size: 13px;
             line-height: 90px;
             li{
                 transition: box-shadow .5s;
@@ -44,37 +32,93 @@ header{
                 }
 
                 &:hover{
-                    box-shadow: inset 0 -10px 0 -5px $blue-text-active;
+                    box-shadow: inset 0 -12px 0 -6px #0282f9;
                 }
 
                 &.active{
-                    box-shadow: inset 0 -10px 0 -5px $blue-text-active;
+                    box-shadow: inset 0 -12px 0 -6px #0282f9;
                 }
 
             }
         }
     }
 
-    .srcBar{
-        border: none;
-        border-bottom: 3px solid $blue-text-active;
-        text-align: right;
+    .searchBar{
+        border: 2px solid #0282f9;
         outline: none;
     }
 }
 
-#jumbo{
-    max-height: 300px;
+#jumbotron{
+    max-height: 625px;
     overflow: hidden;
     img{
+
         width: 100%;
     }
 }
+main{
+    section{
 
+        background-color: #1c1c1c;
+    
+        #CurrentSeries{
+    
+            .cover-wrapper{
+                color: white;
+                font-size: 13px;
+    
+                .cover{
+                    width: 100%;
+                    cursor: pointer;
+    
+                    img{
+                        width: 100%;
+                    }
+    
+                    &:hover .comicInfo{
+                        clip-path: polygon(50% 500%, 0% 80%, 100% 80%);
+                        color: white;
+                    }
+    
+                    .comicInfo{
+                        background-image: url('https://img.freepik.com/premium-photo/old-texture-background-vintage-grunge-paper-antique-ancient-parchment-wall-design-template_213524-125.jpg');
+                        clip-path: polygon(100% 100%, 0 100%, 100% 100%);
+                        transition: clip-path .4s ease-in;
+                        font-size: 16px;
+                        
+                        .priceAndType{
+                            color: black;
+                            text-align: end;
+                            .type{
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+    
+            }
+    
+            .currentSeries{
+                background-color: #0282f9;
+                width: 10vw;
+                transform: translate(0, -50%);
+                color: white;
+                font-weight: 700;
+            }
+        }
+    
+        button{
+            background-color: #0282f9;
+            border: none;
+            color: white;
+        }
+    }
+}
 footer{
-    background-color: $grey-footer-bg;
+    background-color: #313131;
 
-    .footer-top{
+    .footerTop{
         height: 320px;
         background-image: url('../img/footer-bg.jpg');
         background-size: cover;
@@ -86,15 +130,15 @@ footer{
 
             ul{
                 list-style: none;
-                color: $grey-text-footer;
-                font-size: $f-smaller;
+                color: #959595;
+                font-size: 13px;
                 margin-right: 20px;
 
                 h4{
-                    font-size: $f-small;
+                    font-size: 16px;
                     color: white;
-                    text-transform: uppercase;
                     margin: 12px 0;
+                    text-transform: uppercase;
                 }
 
                 li{
@@ -116,26 +160,24 @@ footer{
         }
     }
 
-    .footer-bottom{
+    .footerBottom{
         height: 80px;
         .container{
             height: 100%;
 
-            .shopBtn{
-                border: 2px solid $blue-bg;
+            .shopNowButton{
+                border: 2px solid #0282f9;
                 padding: 5px 10px;
-                text-transform: uppercase;
                 color: white;
-                font-size: $f-small;
+                font-size: 16px;
             }
 
             .socials{
                 width: 40%;
                 h4{
                     margin: 0;
-                    color: $blue-follow-us;
-                    text-transform: uppercase;
-                    font-weight: bolder;
+                    color: #0282f9;
+                    font-weight: 700;
                 }
             }
         }
@@ -143,173 +185,4 @@ footer{
 
 }
 
-section{
 
-    background-color: $darkgrey;
-
-    #current-series{
-
-        a{
-            display: block;
-        }
-
-        .cover-wrapper{
-            color: white;
-            font-size: $f-smaller;
-
-            .modify-comic{
-                width: max-content
-            }
-
-            .cover{
-                width: 100%;
-                cursor: pointer;
-
-                img{
-                    width: 100%;
-                }
-
-
-                &:hover .comic-info{
-                    clip-path: polygon(100% 100%, 0 100%, 100% 24%);
-                }
-
-                .comic-info{
-                    background-image: url('https://img.freepik.com/premium-photo/old-texture-background-vintage-grunge-paper-antique-ancient-parchment-wall-design-template_213524-125.jpg');
-                    clip-path: polygon(100% 100%, 0 100%, 100% 100%);
-                    transition: clip-path .3s ease-out;
-                    font-size: $f-small;
-                    div{
-                        color: black;
-                        text-align: end;
-                        padding: 10px;
-                        .type{
-                            font-size: $f-smaller;
-                        }
-                    }
-                }
-            }
-
-        }
-
-        .banner{
-            background-color: $blue-bg;
-            width: max-content;
-            transform: translate(0, -50%);
-            color: white;
-        }
-    }
-
-    button{
-        background-color: $blue-bg;
-        border: none;
-        color: white;
-    }
-}
-
-#comicSpecs{
-    .current-comic{
-        height: 60px;
-        background-color: $blue-bg;
-        .container{
-            height: 100%;
-            width: 70%;
-            img{
-                bottom: 10px;
-                left: 0;
-                width: 195px;
-                height: 295px;
-            }
-        }
-    }
-
-    .comic-infos{
-        width: 70%;
-        padding: 50px;
-        .info-box{
-            width: 65%;
-            min-height: 100px;
-            h4{
-                font-size: 1.8rem;
-                text-transform: uppercase;
-            }
-
-            .price-availability{
-                height: 40px;
-                background-color: rgb(88, 176, 94);
-
-                .pa-left{
-                    width: 70%;
-                    height: 100%;
-                    border-right: 2px solid darkslategrey;
-                }
-
-                .pa-right{
-                    width: 30%;
-                }
-            }
-
-        }
-
-        .adv{
-            width: 35%;
-            min-height: 100px;
-        }
-    }
-
-    .more-infos{
-        background-color: #f6f6f6;
-        min-height: 300px;
-        .container{
-            width: 70%;
-            .talent{
-                width: 55%;
-                h4{
-                    padding: 20px 0;
-                    border-bottom: 1px solid $grey-icons-bg;
-                }
-                div{
-                    padding: 20px 0;
-                    border-bottom: 1px solid $grey-icons-bg;
-                }
-            }
-            .specs{
-                width: 45%;
-                h4{
-                    padding: 20px 0;
-                    border-bottom: 1px solid $grey-icons-bg;
-                }
-                div{
-                    padding: 20px 0;
-                    border-bottom: 1px solid $grey-icons-bg;
-                }
-            }
-        }
-    }
-
-    .browse-sections{
-        height: 40px;
-        background-color: paleturquoise;
-        > div{
-            height: 100%;
-        }
-    }
-}
-
-
-#createForm{
-    height: 100vh;
-
-    .edit-title{
-        color: palevioletred;
-    }
-
-    &.edit{
-        background-color: orange;
-    }
-
-    label{
-        margin-top: 12px;
-        margin-bottom: 5px;
-    }
-}
